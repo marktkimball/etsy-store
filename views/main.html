@@ -1,0 +1,10 @@
+<div ng-include="'views/nav.html'"></div>
+
+<div class = "storeItem" ng-repeat = "el in items">
+  <a class="detailLink" href="#/detail/{{el.id}}">
+    <img ng-src="{{el.smallImg}}" alt="" />
+    <h3 class="itemTitle">{{el.title}}</h3>
+  </a>
+  <p>{{el.price | currency}}</p>
+  <a href="{{el.etsyUrl}}">View on Etsy</a>
+</div>

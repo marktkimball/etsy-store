@@ -1,0 +1,11 @@
+<div ng-include="'views/nav.html'"></div>
+
+<div ng-repeat = "el in items">
+  <a class="detailLink" href="#/detail/{{el.id}}">
+    <img ng-src="{{el.tinyImg}}" alt="" />
+    <h3 class="itemTitle">{{el.title}}</h3>
+  </a>
+  <p>{{el.price | currency}}</p>
+  <a href="{{el.etsyUrl}}">View on Etsy</a>
+  <a class="glyphicon glyphicon-remove" href="#/shoppingcart" ng-click="removeFromCart(el._id)"></a>
+</div>

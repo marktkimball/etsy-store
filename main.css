@@ -1,0 +1,60 @@
+a:hover{
+  text-decoration: none;
+}
+
+.storeItem{
+  border: solid #000 1px;
+  display: inline-block;
+  width: 450px;
+  height: 350px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.itemTitle{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.detailLink{
+  margin: auto;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}
+
+.detailItem{
+  border: solid #000 1px;
+  padding: 15px;
+  width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+.navBar{
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  display: inline-block;
+}
+
+.glyphicon-shopping-cart{
+  font-size: 3.5em;
+}
+
+.glyphicon-remove{
+  font-size: 2em;
+}
+
+.cartCounter{
+  background-color: #FF0000;
+  border-radius: 50%;
+  font-size: 1.5em;
+  padding: 2px 10px 2px 10px;
+}
