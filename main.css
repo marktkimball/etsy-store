@@ -1,20 +1,43 @@
+body{
+  background-color: #F5F5F1;
+  color:#5E451A;
+}
+
 a:hover{
   text-decoration: none;
 }
 
 .storeItem{
-  border: solid #000 1px;
+  background-color: #FCF1DE;
+  border: solid #957D54 2px;
   display: inline-block;
   width: 450px;
-  height: 350px;
   margin: 15px;
   padding: 10px;
+  border-radius: 5px;
+  color: #957D54;
+}
+
+.storeItem h4{
+  float: right;
+}
+
+.storeItem a{
+  clear: both;
+  display:block;
+  color: #957D54;
+  text-align: center;
+}
+
+.storeItem a:hover{
+  color: #B59F7A;
 }
 
 .itemTitle{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  color: #957D54;
 }
 
 .detailLink{
@@ -24,16 +47,47 @@ a:hover{
   padding-top: 10px;
 }
 
+.itemTitle:hover{
+  color: #B59F7A;
+}
+
 .detailItem{
-  border: solid #000 1px;
+  background-color: #FCF1DE;
+  border: solid #957D54 2px;
+  border-radius: 5px;
   padding: 15px;
   width: 800px;
   text-align: center;
   margin: auto;
 }
 
+.detailItem a{
+  color: #957D54;
+  text-align: center;
+}
+
+.detailItem a:hover{
+  color: #B59F7A;
+}
+
 .navBar{
   width: 100%;
+  padding: 5px 25px 20px 25px;
+}
+
+.navBar h1{
+  font-family: 'Bad Script', cursive;
+  font-size: 9em;
+}
+
+.navBar a{
+  color: #957D54;
+}
+
+.navBar ul{
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 ul{
@@ -44,16 +98,55 @@ li{
   display: inline-block;
 }
 
+.shoppingCart{
+  width: 75%;
+  margin: auto;
+}
+
+.shoppingCartItem{
+  background-color: #FCF1DE;
+  border: solid #957D54 2px;
+  border-radius: 5px;
+  padding: 15px 15px 35px 15px;
+  margin-bottom: 15px;
+}
+
+.shoppingCartItem img{
+  vertical-align: inherit;
+}
+
+.shoppingDescription a{
+  color:#957D54;
+}
+
+.shoppingDescription a:hover{
+  color: #B59F7A;
+}
+
+.shoppingDescription li{
+  display: block;
+}
+
+.shoppingCartTotal{
+  float:right;
+}
+
 .glyphicon-shopping-cart{
   font-size: 3.5em;
 }
 
 .glyphicon-remove{
   font-size: 2em;
+  color:#957D54;
+  float: right;
+}
+
+.glyphicon-remove:hover{
+  color: #B59F7A;
 }
 
 .cartCounter{
-  background-color: #FF0000;
+  background-color: #FCF1DE;
   border-radius: 50%;
   font-size: 1.5em;
   padding: 2px 10px 2px 10px;
