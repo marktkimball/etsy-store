@@ -9,3 +9,8 @@
   <a href="{{el.etsyUrl}}">View on Etsy</a>
   <a class="glyphicon glyphicon-remove" href="#/shoppingcart" ng-click="removeFromCart(el._id)"></a>
 </div>
+
+<div class="shoppingCartTotal">
+  <h3>{{items.length}} Items in Cart</h3>
+  <h3>ORDER TOTAL: {{orderTotalPrice(items) | currency}}</h3>
+</div>

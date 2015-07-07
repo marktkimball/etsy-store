@@ -14,10 +14,19 @@
 
     })
 
-    .controller('ShoppingCartController', function($scope, ShoppingCartService){
+    .controller('ShoppingCartController', function($scope, _, ShoppingCartService){
       ShoppingCartService.getCart().then(function(items){
         $scope.items = items;
+
+        $scope.orderTotalPrice = function(items){
+          var total = 0;
+          _.each(items, function(el){
+            total += Number(el.price);
+          });
+          return total;
+        }
       })
+
 
       $scope.addToCart = function(item){
         ShoppingCartService.addToCart(item);
