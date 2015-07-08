@@ -1,7 +1,7 @@
 <div class="mainStore">
   <ul class="filterSort">
     <li>Filter: <input type="text" name="name" value="" placeholder="Keyword..." class="filterSearch" ng-model="searchFilter"></li>
-    <li>Sort Results By: <a href="" ng-click="selectSort('price')">Price (low - high)</a> | <a href="" ng-click="selectSort('-price')">Price (high - low)</a> | <a href="" ng-click="selectSort('title')">Name (A - Z)</a> | <a href="" ng-click="selectSort('-title')">Name (Z - A)</a></li>
+    <li>Sort: <a href="" ng-click="selectSort('price')"> Price (low - high)</a> | <a href="" ng-click="selectSort('-price')">Price (high - low)</a> | <a href="" ng-click="selectSort('title')">Name (A - Z)</a> | <a href="" ng-click="selectSort('-title')">Name (Z - A)</a></li>
   </ul>
   <div class = "storeItem" ng-repeat = "el in items | orderBy:sortName | filter:searchFilter">
     <a class="detailLink" href="#/detail/{{el.id}}"><img ng-src="{{el.smallImg}}" alt="" /></a>

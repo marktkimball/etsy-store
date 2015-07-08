@@ -94,6 +94,11 @@ a:hover{
   margin: auto;
 }
 
+.detailItem img{
+  max-width:95%;
+  max-height: 95%;
+}
+
 .detailItem a{
   color: #957D54;
   text-align: center;
@@ -153,11 +158,23 @@ li{
   border: solid #957D54 2px;
   border-radius: 5px;
   padding: 15px 15px 35px 15px;
-  margin-bottom: 15px;
+  margin-top: 45px;
+}
+
+.shoppingCartItem:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
 }
 
 .shoppingCartItem img{
-  vertical-align: inherit;
+  float:left;
+  padding-right: 30px;
+}
+
+.shoppingDescription{
+  text-align: right;
 }
 
 .shoppingDescription a{
@@ -203,6 +220,9 @@ li{
   }
   .filterSort{
     margin-top: -40px;
+  }
+  .detailItem{
+    width: 90%;
   }
 }
 
