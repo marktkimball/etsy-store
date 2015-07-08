@@ -1,0 +1,20 @@
+<div class="shoppingCart">
+  <div class="shoppingCartItem" ng-repeat = "el in items">
+    <ul>
+      <li><img ng-src="{{el.tinyImg}}" alt="" /></li>
+      <li>
+        <ul class="shoppingDescription">
+          <li><h3><a href="#/detail/{{el.id}}">{{el.title}}</a></h3></li>
+          <li>{{el.price | currency}}</li>
+          <li><a href="{{el.etsyUrl}}">View on Etsy</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="glyphicon glyphicon-remove" href="#/shoppingcart" ng-click="removeFromCart(el._id)"></a>
+  </div>
+
+  <div class="shoppingCartTotal">
+    <h3>TOTAL: {{orderTotalPrice(items) | currency}}</h3>
+    <h3>{{items.length}} Items in Cart</h3>
+  </div>
+</div>
