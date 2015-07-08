@@ -1,7 +1,8 @@
 <div ng-include="'views/nav.html'"></div>
 
-<div class="mainStore">
-  <div class = "storeItem" ng-repeat = "el in items">
+<div class="mainStore" ng-controller="MainController as mainCtrl">
+  <p class="sortTitles"><a href="" ng-click="mainCtrl.selectFilter('price')">Price</a> | <a href="" ng-click="mainCtrl.selectFilter('title')">Name</a></p>
+  <div class = "storeItem" ng-repeat = "el in items | orderBy:filterNumber">
     <a class="detailLink" href="#/detail/{{el.id}}"><img ng-src="{{el.smallImg}}" alt="" /></a>
     <a class="detailLink" href="#/detail/{{el.id}}"><h3 class="itemTitle">{{el.title}}</h3></a>
     <h4>{{el.price | currency}}</h4>

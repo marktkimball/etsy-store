@@ -7,6 +7,24 @@ a:hover{
   text-decoration: none;
 }
 
+.mainStore{
+  margin: auto;
+  width: 90%;
+}
+
+.sortTitles{
+  text-align: right;
+  margin-right: 5%;
+}
+
+.sortTitles a{
+  color: #957D54;
+}
+
+.sortTitles a:hover{
+  color: #B59F7A;
+}
+
 .storeItem{
   background-color: #FCF1DE;
   border: solid #957D54 2px;
