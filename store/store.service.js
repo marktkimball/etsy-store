@@ -17,7 +17,7 @@
 
       var mapData = function(dataArray){
         return _.map(dataArray, function(obj){
-          return {tinyImg: obj.MainImage.url_75x75, smallImg: obj.MainImage.url_170x135, largeImg: obj.MainImage.url_570xN, title: obj.title, etsyUrl: obj.url, description: obj.description, price: Number(obj.price), materials: obj.materials, id: obj.listing_id}
+          return {tinyImg: obj.MainImage.url_75x75, smallImg: obj.MainImage.url_170x135, largeImg: obj.MainImage.url_570xN, title: cleanCharacters(obj.title), etsyUrl: obj.url, description: cleanCharacters(obj.description), price: Number(obj.price), materials: obj.materials, id: obj.listing_id}
         })
       };
 
@@ -49,6 +49,12 @@
         }
         return deferred.promise;
       }
+
+      var cleanCharacters = function(html) {
+       var text = document.createElement("textarea");
+       text.innerHTML = html;
+       return text.value;
+};
 
       return {
         getItems : getItems,
