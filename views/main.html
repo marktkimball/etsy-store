@@ -1,9 +1,9 @@
 <div ng-include="'views/nav.html'"></div>
 
-<div class="mainStore" ng-controller="MainController as mainCtrl">
+<div class="mainStore">
   <ul class="filterSort">
     <li>Filter results: <input type="text" name="name" value="" placeholder="Keyword..." class="filterSearch" ng-model="searchFilter"></li>
-    <li>Sort Results By: <a href="" ng-click="mainCtrl.selectSort('price')">Price</a> | <a href="" ng-click="mainCtrl.selectSort('title')">Name</a></li>
+    <li>Sort Results By: <a href="" ng-click="selectSort('price')">Price</a> | <a href="" ng-click="selectSort('title')">Name</a></li>
   </ul>
   <div class = "storeItem" ng-repeat = "el in items | orderBy:sortName | filter:searchFilter">
     <a class="detailLink" href="#/detail/{{el.id}}"><img ng-src="{{el.smallImg}}" alt="" /></a>

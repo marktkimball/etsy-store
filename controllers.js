@@ -4,17 +4,20 @@
   angular
     .module('etsyStore')
     .controller('MainController', function($scope, StoreService, $routeParams, $rootScope){
+
       StoreService.getItems().then(function(items){
         $scope.items = items;
       })
 
-      StoreService.getItem($routeParams.productId).then(function(item){
-        $scope.item = item;
-      })
+      if($routeParams.productId){
+        StoreService.getItem($routeParams.productId).then(function(item){
+          $scope.item = item;
+        })
+      }
 
       $scope.sortName = 'id';
 
-      this.selectSort = function(sortSelected){
+      $scope.selectSort = function(sortSelected){
         $scope.sortName = sortSelected;
         $rootScope.$broadcast('sorter:updated');
       }
@@ -29,19 +32,19 @@
 
     })
 
-    .controller('ShoppingCartController', function($scope, _, ShoppingCartService){
-      ShoppingCartService.getCart().then(function(items){
-        $scope.items = items;
+    .controller('ShoppingCartController', function($scope, _, ShoppingCartService, $location){
 
-        $scope.orderTotalPrice = function(items){
-          var total = 0;
-          _.each(items, function(el){
-            total += Number(el.price);
-          });
-          return total;
-        }
-      })
+        ShoppingCartService.getCart().then(function(items){
+          $scope.items = items;
+        })
 
+      $scope.orderTotalPrice = function(items){
+        var total = 0;
+        _.each(items, function(el){
+          total += Number(el.price);
+        });
+        return total;
+      }
 
       $scope.addToCart = function(item){
         ShoppingCartService.addToCart(item);

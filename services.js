@@ -3,7 +3,10 @@
 
   angular
     .module('etsyStore')
-    .factory('StoreService', function($http, _){
+    .factory('StoreService', function($http, _, $q, $cacheFactory){
+
+      var cacheCreator = $cacheFactory('CacheCreator');
+
       var urlOptions = {
         baseUrl: 'https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&keywords=running&api_key=',
         apiKey: 'bvkb5zmhkonrbcizks9cqeh1',
@@ -20,17 +23,32 @@
       };
 
       var getItems = function(){
-        return $http.jsonp(urlOptions.buildUrl()).then(function(items){
-          var itemsArray = items.data.results;
-          return mapData(itemsArray);
-        })
+        var deferred = $q.defer();
+        var cache = cacheCreator.get('items');
+        if(cache){
+          deferred.resolve(cache);
+        }else{
+          $http.jsonp(urlOptions.buildUrl()).then(function(items){
+            var itemsArray = items.data.results;
+            cacheCreator.put('items', mapData(itemsArray));
+            deferred.resolve(mapData(itemsArray));
+          })
+        }
+        return deferred.promise;
       };
 
       var getItem = function(id){
-        return $http.jsonp(urlOptions.buildUrl()).then(function(items){
-          var individualItem = _.where(items.data.results, {listing_id: Number(id)});
-          return mapData(individualItem)[0];
-        })
+        var deferred = $q.defer();
+        var cache = cacheCreator.get('items');
+        if(cache){
+          deferred.resolve(_.where(cache, {id: Number(id)})[0]);
+        }else{
+          $http.jsonp(urlOptions.buildUrl()).then(function(items){
+            var individualItem = _.where(items.data.results, {listing_id: Number(id)});
+            deferred.resolve(mapData(individualItem)[0]);
+          })
+        }
+        return deferred.promise;
       }
 
       return {
