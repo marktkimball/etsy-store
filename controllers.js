@@ -5,7 +5,6 @@
     .module('etsyStore')
     .controller('MainController', function($scope, StoreService, $routeParams, $rootScope){
       StoreService.getItems().then(function(items){
-        console.log(items);
         $scope.items = items;
       })
 
@@ -13,11 +12,11 @@
         $scope.item = item;
       })
 
-      $scope.filterNumber = 'id';
+      $scope.sortName = 'id';
 
-      this.selectFilter = function(filterSelected){
-        $scope.filterNumber = filterSelected;
-        $rootScope.$broadcast('filter:updated');
+      this.selectSort = function(sortSelected){
+        $scope.sortName = sortSelected;
+        $rootScope.$broadcast('sorter:updated');
       }
 
       var watchCallback = function () {
@@ -26,7 +25,7 @@
         })
       };
 
-      $scope.$on('filter:updated', watchCallback);
+      $scope.$on('sorter:updated', watchCallback);
 
     })
 
