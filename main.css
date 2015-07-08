@@ -161,13 +161,6 @@ li{
   margin-top: 45px;
 }
 
-.shoppingCartItem:before {
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}
-
 .shoppingCartItem img{
   float:left;
   padding-right: 30px;
