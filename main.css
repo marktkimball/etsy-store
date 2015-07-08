@@ -15,16 +15,17 @@ a:hover{
 .filterSort{
   padding: 0;
   margin-right: 5%;
+  margin-top: -80px;
   border: #957D54 1px solid;
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
+  text-align: right;
 }
 
 .filterSort li{
   display: block;
-  text-align: right;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 .filterSort a{
@@ -43,7 +44,7 @@ a:hover{
   background-color: #FCF1DE;
   border: solid #957D54 2px;
   display: inline-block;
-  width: 450px;
+  width: 30%;
   margin: 15px;
   padding: 10px;
   border-radius: 5px;
@@ -194,4 +195,25 @@ li{
   border-radius: 50%;
   font-size: 1.5em;
   padding: 2px 10px 2px 10px;
+}
+
+@media all and (max-width: 1040px){
+  .storeItem{
+    width: 45%;
+  }
+  .filterSort{
+    margin-top: -40px;
+  }
+}
+
+@media all and (max-width: 700px){
+  .storeItem{
+    width: 90%;
+  }
+  .filterSort{
+    margin-top: 20px;
+  }
+  .navBar h1{
+    margin-right: 90px;
+  }
 }
