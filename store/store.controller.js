@@ -10,6 +10,7 @@
 
       if($routeParams.productId){
         StoreService.getItem($routeParams.productId).then(function(item){
+          console.log(item);
           $scope.item = item;
         })
       }

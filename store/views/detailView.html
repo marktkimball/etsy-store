@@ -2,13 +2,13 @@
     <img ng-src="{{item.largeImg}}" alt="" />
     <h2>{{item.title}}</h2>
   <p>{{item.description}}</p>
-  <h2>{{item.price | currency}}</h2>
-  <div ng-show="{{item.materials.length > 0}}">
+  <div class="materialsList" ng-show="item.materials.length > 0">
     <h4>Materials Used: </h4>
     <ul>
       <li ng-repeat="el in item.materials">{{el}}</li>
     </ul>
   </div>
+  <h2>{{item.price | currency}}</h2>
   <p><button class="btn btn-default" type="submit" ng-controller = "ShoppingCartController" ng-click="addToCart(item)">Add to Cart</button></p>
   <a href="{{item.etsyUrl}}">View on Etsy</a>
 </div>
