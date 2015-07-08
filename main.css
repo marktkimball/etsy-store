@@ -12,17 +12,31 @@ a:hover{
   width: 90%;
 }
 
-.sortTitles{
-  text-align: right;
+.filterSort{
+  padding: 0;
   margin-right: 5%;
+  border: #957D54 1px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
 }
 
-.sortTitles a{
+.filterSort li{
+  display: block;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.filterSort a{
   color: #957D54;
 }
 
-.sortTitles a:hover{
+.filterSort a:hover{
   color: #B59F7A;
+}
+
+.filterSort input{
+  border-radius: 5px;
 }
 
 .storeItem{
