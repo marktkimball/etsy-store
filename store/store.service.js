@@ -7,7 +7,7 @@
       var cacheCreator = $cacheFactory('CacheCreator');
 
       var urlOptions = {
-        baseUrl: 'https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&keywords=running&api_key=',
+        baseUrl: 'https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&keywords=coffee&api_key=',
         apiKey: 'bvkb5zmhkonrbcizks9cqeh1',
         callback: '&callback=JSON_CALLBACK',
         buildUrl: function(){
