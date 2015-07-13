@@ -1,18 +1,5 @@
-<div class="shoppingCart">
+<div class="shoppingCart" ng-controller="ShoppingCartController">
   <shopping-cart-item ng-repeat="el in items" i="el"></shopping-cart-item>
-  <!-- <div class="shoppingCartItem" ng-repeat = "el in items"> -->
-        <!-- <ul class="shoppingDescription">
-          <li><img ng-src="{{el.tinyImg}}" alt="" /></li>
-          <li>
-            <ul>
-              <li><h3><a href="#/detail/{{el.id}}">{{el.title}}</a></h3></li>
-              <li>{{el.price | currency}}</li>
-              <li><a href="{{el.etsyUrl}}">View on Etsy</a></li>
-              <li><a class="glyphicon glyphicon-remove" href="#/shoppingcart" ng-click="removeFromCart(el._id)"></a></li>
-            </ul>
-          </li>
-        </ul> -->
-  </div>
 
   <div class="shoppingCartTotal">
     <h3>TOTAL: {{orderTotalPrice(items) | currency}}</h3>
