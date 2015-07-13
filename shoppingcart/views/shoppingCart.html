@@ -1,6 +1,7 @@
 <div class="shoppingCart">
-  <div class="shoppingCartItem" ng-repeat = "el in items">
-        <ul class="shoppingDescription">
+  <shopping-cart-item ng-repeat="el in items" i="el"></shopping-cart-item>
+  <!-- <div class="shoppingCartItem" ng-repeat = "el in items"> -->
+        <!-- <ul class="shoppingDescription">
           <li><img ng-src="{{el.tinyImg}}" alt="" /></li>
           <li>
             <ul>
@@ -10,7 +11,7 @@
               <li><a class="glyphicon glyphicon-remove" href="#/shoppingcart" ng-click="removeFromCart(el._id)"></a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
   </div>
 
   <div class="shoppingCartTotal">
