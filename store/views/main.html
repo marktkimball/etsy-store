@@ -3,10 +3,5 @@
     <li>Filter: <input type="text" name="name" value="" placeholder="Keyword..." class="filterSearch" ng-model="searchFilter"></li>
     <li>Sort: <a href="" ng-click="selectSort('price')"> Price (low - high)</a> | <a href="" ng-click="selectSort('-price')">Price (high - low)</a> | <a href="" ng-click="selectSort('title')">Name (A - Z)</a> | <a href="" ng-click="selectSort('-title')">Name (Z - A)</a></li>
   </ul>
-  <div class = "storeItem" ng-repeat = "el in items | orderBy:sortName | filter:searchFilter">
-    <a class="detailLink" href="#/detail/{{el.id}}"><img ng-src="{{el.smallImg}}" alt="" /></a>
-    <a class="detailLink" href="#/detail/{{el.id}}"><h3 class="itemTitle">{{el.title}}</h3></a>
-    <h4>{{el.price | currency}}</h4>
-    <a href="{{el.etsyUrl}}">View on Etsy</a>
-  </div>
+  <product-item class="storeItem" ng-repeat="el in items | orderBy:sortName | filter:searchFilter" i="el"></product-item>
 </div>

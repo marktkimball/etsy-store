@@ -3,7 +3,7 @@
   angular
     .module('store')
     .controller('StoreController', function($scope, StoreService, $routeParams, $rootScope){
-
+      
       StoreService.getItems().then(function(items){
         $scope.items = items;
       })
