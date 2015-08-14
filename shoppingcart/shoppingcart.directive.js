@@ -11,10 +11,10 @@
         },
         link: function(scope, element, attributes){
           element.children().on('mouseenter', function(){
-            element.children().addClass('dropShadow');
+            element.addClass('dropShadow');
           });
           element.children().on('mouseleave', function(){
-            element.children().removeClass('dropShadow');
+            element.removeClass('dropShadow');
           });
         }
       }

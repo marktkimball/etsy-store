@@ -1,13 +1,9 @@
-<div class="shoppingCartItem">
-  <ul class="shoppingDescription">
-    <li><img ng-src="{{i.tinyImg}}" alt="" /></li>
-    <li>
+    <div><img ng-src="{{i.smallImg}}" alt="" /></div>
+    <div>
       <ul>
         <li><h3><a href="#/detail/{{i.id}}">{{i.title}}</a></h3></li>
         <li>{{i.price | currency}}</li>
         <li><a href="{{i.etsyUrl}}">View on Etsy</a></li>
         <li><a class="glyphicon glyphicon-remove" href="#/shoppingcart" ng-controller = "ShoppingCartController" ng-click="removeFromCart(i._id)"></a></li>
       </ul>
-    </li>
-  </ul>
-</div>
+    </div>
