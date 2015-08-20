@@ -3,7 +3,7 @@
   angular
     .module('shoppingcart')
     .factory('ShoppingCartService', function($http, $rootScope){
-      var cartUrl = "http://stormy-ocean-9523.herokuapp.com/collections/etsy-cart";
+      var cartUrl = "https://stormy-ocean-9523.herokuapp.com/collections/etsy-cart";
 
       var getCart = function(){
         return $http.get(cartUrl).then(function(items){
