@@ -1,6 +1,6 @@
 body {
   background-color: #F5F5F1;
-  color: #5E451A; }
+  color: #BA9075; }
 
 ul {
   list-style: none; }
@@ -13,53 +13,55 @@ a:hover {
 
 .mainStore {
   margin: auto;
-  width: 90%; }
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
 
 .filterSort {
-  padding: 0;
-  margin-right: 5%;
-  margin-top: -40px;
-  border: #957D54 1px solid;
+  background-color: #FFEBDF;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 5%;
+  border: #BA9075 2px solid;
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
   text-align: right; }
-  .filterSort li {
-    display: block;
-    margin-bottom: 30px; }
   .filterSort a {
-    color: #957D54; }
+    color: #BA9075; }
     .filterSort a:hover {
-      color: #B59F7A; }
+      color: #DCBCA8; }
   .filterSort input {
     border-radius: 3px; }
 
 .storeItem {
-  background-color: #FCF1DE;
-  border: solid #957D54 2px;
+  background-color: #FFEBDF;
+  border: solid #BA9075 2px;
   display: inline-block;
   width: 30%;
   margin: 15px;
   padding: 10px;
   border-radius: 5px;
-  color: #957D54; }
+  color: #BA9075; }
   .storeItem h4 {
     float: right; }
   .storeItem a {
     clear: both;
     display: block;
-    color: #957D54;
+    color: #BA9075;
     text-align: center; }
-  .storeItem:hover {
-    color: #B59F7A; }
+    .storeItem a:hover {
+      color: #DCBCA8; }
 
 .itemTitle {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: #957D54; }
+  color: #BA9075; }
   .itemTitle:hover {
-    color: #B59F7A; }
+    color: #DCBCA8; }
 
 .detailLink {
   margin: auto;
@@ -68,22 +70,23 @@ a:hover {
   padding-top: 10px; }
 
 .detailItem {
-  background-color: #FCF1DE;
-  border: solid #957D54 2px;
+  background-color: #FFEBDF;
+  border: solid #BA9075 2px;
   border-radius: 5px;
   padding: 15px;
   width: 800px;
   text-align: center;
   margin: auto;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  margin-top: 25px; }
   .detailItem img {
     max-width: 95%;
     max-height: 95%; }
   .detailItem a {
-    color: #957D54;
+    color: #BA9075;
     text-align: center; }
-  .detailItem:hover {
-    color: #B59F7A; }
+    .detailItem a:hover {
+      color: #DCBCA8; }
 
 .materialsList {
   width: 50%;
@@ -95,13 +98,18 @@ a:hover {
       display: list-item; }
 
 .navBar {
+  background-color: #FFEBDF;
   width: 100%;
-  padding: 5px 25px 20px 25px; }
+  padding: 5px 25px 20px 25px;
+  border: #BA9075 2px solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px; }
   .navBar h1 {
     font-family: 'Bad Script', cursive;
     font-size: 5em; }
   .navBar a {
-    color: #957D54; }
+    color: #BA9075; }
   .navBar ul {
     position: absolute;
     top: 30px;
@@ -112,8 +120,8 @@ a:hover {
   margin: auto; }
 
 shopping-cart-item {
-  background-color: #FCF1DE;
-  border: solid #957D54 2px;
+  background-color: #FFEBDF;
+  border: solid #BA9075 2px;
   border-radius: 5px;
   padding: 15px 15px 35px 15px;
   margin-top: 45px;
@@ -124,9 +132,9 @@ shopping-cart-item {
     height: auto;
     float: left; }
   shopping-cart-item a {
-    color: #957D54; }
-  shopping-cart-item:hover {
-    color: #B59F7A; }
+    color: #BA9075; }
+    shopping-cart-item a:hover {
+      color: #DCBCA8; }
   shopping-cart-item div {
     flex: 1;
     align-self: center; }
@@ -141,21 +149,27 @@ shopping-cart-item {
   text-align: right;
   margin-bottom: 5%; }
 
+input:focus {
+  outline: none !important;
+  border-color: #DCBCA8;
+  box-shadow: 0 0 10px #BA9075; }
+
 .glyphicon-shopping-cart {
   font-size: 3.5em; }
 
 .glyphicon-remove {
   font-size: 2em;
-  color: #957D54;
+  color: #BA9075;
   float: right; }
   .glyphicon-remove:hover {
-    color: #B59F7A; }
+    color: #DCBCA8; }
 
 .cartCounter {
-  background-color: #FCF1DE;
+  background-color: #BA9075;
   border-radius: 50%;
   font-size: 1.5em;
-  padding: 2px 10px 2px 10px; }
+  padding: 2px 10px 2px 10px;
+  color: #F5F5F1; }
 
 .dropShadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -175,7 +189,10 @@ MEDIA QUERIES
     width: 90%; }
 
   .filterSort {
-    margin-top: 20px; }
+    font-size: 1.2em;
+    text-align: center; }
+    .filterSort li {
+      padding: 0 15px; }
 
   .navBar h1 {
     margin-right: 90px; } }
@@ -201,12 +218,13 @@ MEDIA QUERIES
     margin-right: 0;
     font-size: 4em; }
 
+  .filterSort {
+    flex-direction: column; }
+    .filterSort li:nth-of-type(2) {
+      margin-top: 15px; }
+
   .glyphicon-shopping-cart {
     font-size: 3em; }
-
-  .filterSort {
-    font-size: 1.2em;
-    text-align: center; }
 
   .cartCounter {
     border-radius: 100%; } }
