@@ -1,6 +1,6 @@
-$mainFontColor: #FFD863;
-$hoverFontColor: #FFE995;
-$backgroundColor: #E98957;
+$mainFontColor: #755944;
+$hoverFontColor: #E4A474;
+$backgroundColor: #C5D9A5;
 
 body{
   background-color: whitesmoke;
@@ -111,7 +111,9 @@ a:hover{
       color: $hoverFontColor;
     }
   }
-
+  img{
+    border: 2px solid $mainFontColor;
+  }
 }
 
 .itemTitle{
@@ -143,6 +145,7 @@ a:hover{
   img{
     max-width:95%;
     max-height: 95%;
+    border: 2px solid $mainFontColor;
   }
   a{
     color: $mainFontColor;
@@ -204,7 +207,7 @@ shopping-cart-item{
     width: auto;
     height: auto;
     float: left;
-
+    border: 2px solid $mainFontColor;
   }
   a{
     color:$mainFontColor;
@@ -250,6 +253,14 @@ shopping-cart-item{
   font-size: 1.5em;
   padding: 2px 10px 2px 10px;
   color:#F5F5F1;
+}
+
+input[type='text']{
+    border: 1px solid;
+  &:focus{
+    outline: none !important;
+    box-shadow: 0 0 10px $mainFontColor;
+  }
 }
 
 .dropShadow{

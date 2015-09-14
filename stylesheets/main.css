@@ -1,6 +1,6 @@
 body {
   background-color: whitesmoke;
-  color: #FFD863; }
+  color: #755944; }
 
 ul {
   list-style: none; }
@@ -19,20 +19,20 @@ a:hover {
   justify-content: space-between; }
 
 .filterSort {
-  background-color: #E98957;
+  background-color: #C5D9A5;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 15px 5%;
-  border: #FFD863 2px solid;
+  border: #755944 2px solid;
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
   text-align: right; }
   .filterSort a {
-    color: #FFD863; }
+    color: #755944; }
     .filterSort a:hover {
-      color: #FFE995; }
+      color: #E4A474; }
   .filterSort input {
     border-radius: 3px; }
 
@@ -58,46 +58,48 @@ a:hover {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  border: 2px solid #FFD863; }
+  border: 2px solid #755944; }
   .featured h2 {
     margin-top: 0;
     text-align: center; }
     .featured h2 a {
-      color: #FFD863; }
+      color: #755944; }
       .featured h2 a:hover {
-        color: #FFE995; }
+        color: #E4A474; }
   .featured img {
     max-width: 100%;
     max-height: 450px;
     width: auto;
     height: auto;
-    border: 4px solid #FFD863; }
+    border: 4px solid #755944; }
 
 .storeItem {
-  background-color: #E98957;
-  border: solid #FFD863 2px;
+  background-color: #C5D9A5;
+  border: solid #755944 2px;
   display: inline-block;
   width: 30%;
   margin: 15px;
   padding: 10px;
-  color: #FFD863; }
+  color: #755944; }
   .storeItem h4 {
     float: right; }
   .storeItem a {
     clear: both;
     display: block;
-    color: #FFD863;
+    color: #755944;
     text-align: center; }
     .storeItem a:hover {
-      color: #FFE995; }
+      color: #E4A474; }
+  .storeItem img {
+    border: 2px solid #755944; }
 
 .itemTitle {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: #FFD863; }
+  color: #755944; }
   .itemTitle:hover {
-    color: #FFE995; }
+    color: #E4A474; }
 
 .detailLink {
   margin: auto;
@@ -106,8 +108,8 @@ a:hover {
   padding-top: 10px; }
 
 .detailItem {
-  background-color: #E98957;
-  border: solid #FFD863 2px;
+  background-color: #C5D9A5;
+  border: solid #755944 2px;
   padding: 15px;
   width: 800px;
   text-align: center;
@@ -116,12 +118,13 @@ a:hover {
   margin-top: 25px; }
   .detailItem img {
     max-width: 95%;
-    max-height: 95%; }
+    max-height: 95%;
+    border: 2px solid #755944; }
   .detailItem a {
-    color: #FFD863;
+    color: #755944;
     text-align: center; }
     .detailItem a:hover {
-      color: #FFE995; }
+      color: #E4A474; }
 
 .materialsList {
   width: 50%;
@@ -133,10 +136,10 @@ a:hover {
       display: list-item; }
 
 .navBar {
-  background-color: #E98957;
+  background-color: #C5D9A5;
   width: 100%;
   padding: 5px 25px 20px 25px;
-  border: #FFD863 2px solid;
+  border: #755944 2px solid;
   border-top: 0px;
   border-right: 0px;
   border-left: 0px; }
@@ -144,7 +147,7 @@ a:hover {
     font-family: 'Fjalla One', sans-serif;
     font-size: 5em; }
   .navBar a {
-    color: #FFD863;
+    color: #755944;
     text-decoration: none; }
   .navBar ul {
     position: absolute;
@@ -156,8 +159,8 @@ a:hover {
   margin: auto; }
 
 shopping-cart-item {
-  background-color: #E98957;
-  border: solid #FFD863 2px;
+  background-color: #C5D9A5;
+  border: solid #755944 2px;
   padding: 15px 15px 35px 15px;
   margin-top: 45px;
   display: flex; }
@@ -165,11 +168,12 @@ shopping-cart-item {
     max-width: 100%;
     width: auto;
     height: auto;
-    float: left; }
+    float: left;
+    border: 2px solid #755944; }
   shopping-cart-item a {
-    color: #FFD863; }
+    color: #755944; }
     shopping-cart-item a:hover {
-      color: #FFE995; }
+      color: #E4A474; }
   shopping-cart-item div {
     flex: 1;
     align-self: center; }
@@ -189,17 +193,23 @@ shopping-cart-item {
 
 .glyphicon-remove {
   font-size: 2em;
-  color: #FFD863;
+  color: #755944;
   float: right; }
   .glyphicon-remove:hover {
-    color: #FFE995; }
+    color: #E4A474; }
 
 .cartCounter {
-  background-color: #FFD863;
+  background-color: #755944;
   border-radius: 50%;
   font-size: 1.5em;
   padding: 2px 10px 2px 10px;
   color: #F5F5F1; }
+
+input[type='text'] {
+  border: 1px solid; }
+  input[type='text']:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px #755944; }
 
 .dropShadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
