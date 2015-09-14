@@ -1,9 +1,9 @@
-$mainFontColor: #BA9075;
-$hoverFontColor: #DCBCA8;
-$backgroundColor: #FFEBDF;
+$mainFontColor: #FFD863;
+$hoverFontColor: #FFE995;
+$backgroundColor: #E98957;
 
 body{
-  background-color: #F5F5F1;
+  background-color: whitesmoke;
   color:$mainFontColor;
 }
 
@@ -49,6 +49,48 @@ a:hover{
   }
 }
 
+.featured{
+  width:90%;
+  height:550px;
+  margin: auto;
+  padding: 20px 50px;
+  background-color: white;
+  display:flex;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  border: 2px solid $mainFontColor;
+  h2{
+    margin-top:0;
+    text-align: center;
+    a{
+      color:$mainFontColor;
+      &:hover{
+        color:$hoverFontColor;
+      }
+    }
+  }
+  img{
+    max-width:100%;
+    max-height:450px;
+    width:auto;
+    height:auto;
+    border: 4px solid $mainFontColor;
+  }
+}
+
 .storeItem{
   background-color: $backgroundColor;
   border: solid $mainFontColor 2px;
@@ -56,7 +98,6 @@ a:hover{
   width: 30%;
   margin: 15px;
   padding: 10px;
-  border-radius: 5px;
   color: $mainFontColor;
   h4{
     float: right;
@@ -93,7 +134,6 @@ a:hover{
 .detailItem{
   background-color: $backgroundColor;
   border: solid $mainFontColor 2px;
-  border-radius: 5px;
   padding: 15px;
   width: 800px;
   text-align: center;
@@ -134,11 +174,12 @@ a:hover{
   border-right: 0px;
   border-left: 0px;
   h1{
-    font-family: 'Bad Script', cursive;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 5em;
   }
   a{
     color: $mainFontColor;
+    text-decoration: none;
   }
   ul{
     position: absolute;
@@ -155,7 +196,6 @@ a:hover{
 shopping-cart-item{
   background-color: $backgroundColor;
   border: solid $mainFontColor 2px;
-  border-radius: 5px;
   padding: 15px 15px 35px 15px;
   margin-top: 45px;
   display:flex;
@@ -189,12 +229,6 @@ shopping-cart-item{
   float:right;
   text-align: right;
   margin-bottom:5%;
-}
-
-input:focus {
-    outline: none !important;
-    border-color:$hoverFontColor;
-    box-shadow: 0 0 10px $mainFontColor;
 }
 
 .glyphicon-shopping-cart{
@@ -250,6 +284,12 @@ MEDIA QUERIES
   .navBar h1{
     margin-right: 90px;
   }
+  .featured{
+    height:400px;
+    img{
+      max-height:300px;
+    }
+  }
 }
 
 @media all and (max-width:500px){
@@ -292,5 +332,12 @@ MEDIA QUERIES
   }
   .cartCounter{
     border-radius: 100%;
+  }
+  .featured{
+    padding: 5px 20px;
+    height:350px;
+    img{
+      max-height:250px;
+    }
   }
 }

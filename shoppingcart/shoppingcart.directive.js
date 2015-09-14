@@ -10,10 +10,10 @@
           i: '='
         },
         link: function(scope, element, attributes){
-          element.children().on('mouseenter', function(){
+          element.on('mouseenter', function(){
             element.addClass('dropShadow');
           });
-          element.children().on('mouseleave', function(){
+          element.on('mouseleave', function(){
             element.removeClass('dropShadow');
           });
         }

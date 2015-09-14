@@ -3,23 +3,25 @@
   angular
     .module('store')
     .controller('StoreController', function($scope, StoreService, $routeParams, $rootScope){
-      
+
       StoreService.getItems().then(function(items){
         $scope.items = items;
+        var random = Math.floor(Math.random() * items.length);
+        $scope.featuredItem = items[random];
       })
 
       if($routeParams.productId){
         StoreService.getItem($routeParams.productId).then(function(item){
           $scope.item = item;
         })
-      }
+      };
 
       $scope.sortName = 'id';
 
       $scope.selectSort = function(sortSelected){
         $scope.sortName = sortSelected;
         $rootScope.$broadcast('sorter:updated');
-      }
+      };
 
       var watchCallback = function () {
         StoreService.getItems().then(function (items) {
