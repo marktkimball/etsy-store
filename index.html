@@ -5,16 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etsy Store</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/main.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body ng-app="etsyStore">
   <div class="navBar">
-    <a href='#/'><h1>Coffeehaus</h1></a>
-    <a href='#/shoppingcart'><ul>
-      <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></li>
-      <li ng-controller="ShoppingCartController" class="cartCounter">{{items.length}}</li>
-    </ul></a>
+    <div class="logo">
+      <a href='#/'>
+        <i class="ion-coffee"></i>
+        <h1>Coffeehaus</h1>
+      </a>
+    </div>
+    <a href='#/shoppingcart'>
+      <ul>
+        <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></li>
+        <li><i class="ion-record"></i><span ng-controller="ShoppingCartController" class="cartCounter">{{items.length}}</span></li>
+        <!-- <li ng-controller="ShoppingCartController" class="cartCounter">{{items.length}}</li> -->
+      </ul>
+    </a>
   </div>
   <ng-view></ng-view>
 </body>

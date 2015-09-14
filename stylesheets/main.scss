@@ -169,9 +169,14 @@ a:hover{
 }
 
 .navBar{
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
   background-color: $backgroundColor;
   width: 100%;
-  padding: 5px 25px 20px 25px;
+  padding: 0px 25px;
+  margin-top:-20px;
   border: $mainFontColor 2px solid;
   border-top: 0px;
   border-right: 0px;
@@ -179,15 +184,12 @@ a:hover{
   h1{
     font-family: 'Fjalla One', sans-serif;
     font-size: 5em;
+    display:inline-block;
+    margin-right:0;
   }
   a{
     color: $mainFontColor;
     text-decoration: none;
-  }
-  ul{
-    position: absolute;
-    top: 30px;
-    right: 30px;
   }
 }
 
@@ -248,11 +250,11 @@ shopping-cart-item{
 }
 
 .cartCounter{
-  background-color: $mainFontColor;
-  border-radius: 50%;
-  font-size: 1.5em;
-  padding: 2px 10px 2px 10px;
-  color:#F5F5F1;
+  color: whitesmoke;
+  font-size: 1.75em;
+  position: absolute;
+  right: 35px;
+  top: 68px;
 }
 
 input[type='text']{
@@ -261,6 +263,15 @@ input[type='text']{
     outline: none !important;
     box-shadow: 0 0 10px $mainFontColor;
   }
+}
+
+.ion-coffee{
+  font-size:8em;
+  padding-right:20px;
+}
+
+.ion-record{
+  font-size:3em;
 }
 
 .dropShadow{
@@ -292,8 +303,24 @@ MEDIA QUERIES
       padding:0 15px;
     }
   }
-  .navBar h1{
-    margin-right: 90px;
+  .navBar{
+    margin-top: -10px;
+    .logo h1{
+      font-size:5em;
+    }
+    .ion-coffee{
+      font-size:5em;
+    }
+     a{
+      font-size:0.75em;
+    }
+  }
+  .cartCounter{
+    right: 33px;
+    top: 35px;
+  }
+  .mainStore{
+    justify-content: center;
   }
   .featured{
     height:400px;
@@ -317,20 +344,21 @@ MEDIA QUERIES
     }
   }
   .navBar{
-    a{
-      display:block;
-      text-align: center;
-      margin-top:40px;
-      ul{
-        position:relative;
-        top:0;
-        right:0;
-      }
+    padding:0 10px;
+    .logo h1{
+      font-size:3.5em;
     }
-    h1{
-      margin-right:0;
-      font-size: 4em;
+    .ion-coffee{
+      font-size:3.5em;
+      padding-right:5px;
     }
+    ul{
+      padding-left: 10px;
+    }
+  }
+  .cartCounter{
+    right: 17px;
+    top: 21px;
   }
   .filterSort{
     flex-direction: column;
