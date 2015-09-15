@@ -8,7 +8,7 @@
         $scope.items = items;
         var random = Math.floor(Math.random() * items.length);
         $scope.featuredItem = items[random];
-      })
+      });
 
       if($routeParams.productId){
         StoreService.getItem($routeParams.productId).then(function(item){
